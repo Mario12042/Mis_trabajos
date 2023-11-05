@@ -1,0 +1,241 @@
+#uno{
+
+    align-items: center;
+    background-color: gold;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    width: 1340px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input{
+    font-size: 30px;
+    background: transparent;
+    border: 2px solid blue;
+    color: aliceblue;
+
+}
+
+body{
+
+    background-color: rgb(15, 7, 43);
+    position: absolute;
+    z-index: 1;
+
+
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+img{
+    width: 200px;
+    height: 90px;
+    justify-content: left;
+}
+
+li{
+    color: aliceblue;
+    background: tr;
+
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    z-index: -1;
+}
+
+.particles{
+    position: relative;
+    top: 450px;
+    display:flex;
+    padding: 0 20px;
+
+}
+
+.particles span{
+   position: relative;
+   bottom: 70%;
+   width: 30px;
+   height: 30px;
+   background: rgb(17, 10, 61) ; 
+   box-shadow: 0 0 0 10px  rgb(17, 10, 61), 0 0 50px aqua,
+   -100px 0 darkblue, 100px 0 yellow ;
+   margin: 0 4px;
+   border-radius: 50%;
+   animation: animate 15s ease-in-out infinite;
+   animation-duration: calc(125s / var(--i));
+}
+
+
+.particles span:nth-child(even)
+{
+    background: red;
+    box-shadow: 0 0 0 10px darkred,
+    0 0 50px red,
+    -100px 0 blue, 100px 0 darkblue;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(120vh) scale(0) rotate(90deg);
+    }
+    20%{
+        transform: translateY(100vh) scale(1) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-80vh) scale(0.5) rotate(360deg);
+    }
+
+}
+
+
+/*@keyframes color-borde {
+
+    0% {
+        border-color: darkblue;
+    }
+      
+      50% {
+        border-color: aqua;
+    }
+      
+      75% {
+        border-color: wheat;
+    }
+    100% {
+        border-color: darkblue;
+    }
+    
+}*/
+
+ul{
+    position: relative;
+   width: 420px;
+   padding: 30px; 
+   margin: auto;
+   font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(17, 10, 61);
+    text-align: center;
+    box-shadow: 22px 50px 60px black;
+    border: 5px solid #000;
+    animation: color-borde  6s linear infinite;
+    overflow: hidden;
+
+    background: linear-gradient(0deg, transparent, darkblue);
+
+
+}
+
+
+
+    
+ul::before{
+    inset: 2px;
+    align-items: center;
+    padding: 30px; 
+    left: -110%;
+    top: 30%;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 700px;
+    border: 5px ;
+    height: 100px;
+
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,   white, white,  white);
+    animation: girar-borde 6s linear infinite;
+}
+
+ul::after{
+    inset: 2px;
+    align-items: center;
+    padding: 30px; 
+    left: -110%;
+    top: 30%;
+    content: "";
+    z-index: -2;
+    position: absolute;
+    width: 700px;
+    border: 5px ;
+    height: 100px;
+
+    transform-origin: bottom right;
+    background: linear-gradient(0deg,   white, white,  white);
+    animation: girar-borde 6s linear infinite;
+    animation-delay: 3s;
+}
+
+
+
+form{
+    position: absolute;
+    inset: 2px;
+    background: #28292d;
+    padding: 50px 40px;
+    border-radius: 5px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@keyframes girar-borde {
+   
+    from {
+        transform: rotate(0deg);
+        
+      }
+      
+      to {
+        transform: rotate(360deg);
+      }
+      
+}
+
+
+
+#Submit{
+    background-color: blue;
+    border:1px solid white;
+    color: aliceblue;
+    width: 90%;
+    padding: 10px;
+    cursor: pointer;
+    transition: .1s;
+    
+
+}
+
+#Submit:active{
+    transform: scale(0.9);
+    transition: .3s;
+}
+
